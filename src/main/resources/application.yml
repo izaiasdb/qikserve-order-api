@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: qikserve
+  jackson:
+    time-zone: America/Sao_Paulo
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  data:
+    mongodb:
+      uri: mongodb://rootuser:rootpass@localhost:27017/?authSource=admin&authMechanism=SCRAM-SHA-1
+      database: qikserve
+      auto-index-creation: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  error:
+    include-stacktrace: never
+
+
